@@ -6,7 +6,7 @@
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 19:31:05 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/05/07 20:30:43 by jovicto2         ###   ########.fr       */
+/*   Updated: 2023/05/07 22:41:38 by jovicto2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int	main(void)
 	printf("%i", ft_toupper('G'));
 	printf("%i", ft_toupper('a'));
 	printf("%i", ft_toupper('0'));
+	printf("%s", "\n");
 	return (0);
 }
