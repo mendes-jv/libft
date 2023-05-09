@@ -6,11 +6,11 @@
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:14:55 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/05/07 20:16:01 by jovicto2         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:35:58 by jovicto2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	return (c >= 'A' && c <= 'Z');
 }

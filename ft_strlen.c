@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 19:26:14 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/05/09 19:01:52 by jovicto2         ###   ########.fr       */
+/*   Created: 2023/05/09 17:28:52 by jovicto2          #+#    #+#             */
+/*   Updated: 2023/05/09 17:52:23 by jovicto2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+size_t	strlen(const char *s)
 {
-	return (ft_islower(c) || ft_isupper(c));
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
