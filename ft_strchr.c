@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 20:13:21 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/05/10 21:56:19 by jovicto2         ###   ########.fr       */
+/*   Created: 2023/05/10 22:00:56 by jovicto2          #+#    #+#             */
+/*   Updated: 2023/05/10 22:51:31 by jovicto2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char	*strchr(const char *s, int c)
 {
-	if (ft_isupper(c))
-		c += 'a' - 'A';
-	return (c);
+	char	*first_occurrence;
+
+	first_occurrence = NULL;
+	while (*s)
+	{
+		if (*s == c)
+		{
+			first_occurrence = (char *)s;
+			break ;
+		}
+		s++;
+	}
+	return (first_occurrence);
 }

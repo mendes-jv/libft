@@ -6,11 +6,15 @@
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 20:14:55 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/05/09 19:35:58 by jovicto2         ###   ########.fr       */
+/*   Updated: 2023/05/10 21:54:49 by jovicto2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_toupper(int c)
 {
-	return (c >= 'A' && c <= 'Z');
+	if (ft_islower(c))
+		c -= 'a' - 'A';
+	return (c);
 }

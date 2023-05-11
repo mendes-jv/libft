@@ -6,7 +6,7 @@
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 17:28:52 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/05/09 17:52:23 by jovicto2         ###   ########.fr       */
+/*   Updated: 2023/05/10 21:52:45 by jovicto2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	strlen(const char *s)
 {
-	size_t	i;
+	size_t	index;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	index = 0;
+	while (s[index])
+		index++;
+	return (index);
 }
