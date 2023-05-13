@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 			last_occurrence = (char *)s;
 		s++;
 	}
-	if(!c)
+	if (!c)
 		last_occurrence = (char *)s;
 	return (last_occurrence);
 }
