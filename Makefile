@@ -10,4 +10,22 @@
 #                                                                              #
 # **************************************************************************** #
 
+NAME = libft.a
 
+SRC = $(wildcard ./*.c)
+
+FLAGS = -Wall -Wextra -Werror -g3
+
+all: $(NAME)
+
+$(NAME):
+	gcc $(FLAGS) -c $(SRC)
+	ar rc $(NAME) *.o
+
+clean:
+	rm -f *.o
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all

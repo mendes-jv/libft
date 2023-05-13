@@ -12,19 +12,21 @@
 
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char	*first_occurrence;
 
 	first_occurrence = NULL;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 		{
 			first_occurrence = (char *)s;
 			break ;
 		}
 		s++;
 	}
+	if (!c)
+		first_occurrence = (char *)s;
 	return (first_occurrence);
 }

@@ -12,16 +12,18 @@
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*last_occurrence;
 
 	last_occurrence = NULL;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			last_occurrence = (char *)s;
 		s++;
 	}
+	if(!c)
+		last_occurrence = (char *)s;
 	return (last_occurrence);
 }
