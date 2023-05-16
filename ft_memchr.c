@@ -26,7 +26,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		}
 		s++;
 	}
-	if (!c)
-		first_occurrence = (unsigned char *)s;
 	return (first_occurrence);
 }
