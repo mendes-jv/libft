@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 18:42:00 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/05/16 21:02:07 by jovicto2         ###   ########.fr       */
+/*   Created: 2023/05/16 20:36:22 by jovicto2          #+#    #+#             */
+/*   Updated: 2023/05/16 21:25:33 by jovicto2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+size_t strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	index;
+	size_t index;
 
 	index = 0;
-	if (!n)
-		return (index);
-	while (index < ft_strlen(s1) && n--)
-		if (*(int *)(s1 + index) == *(int *)(s1 + index))
-			index++;
-	return (*(int *)s1 - *(int *)s2);
+	while (index < ft_strlen(dst) && size--)
+	{
+		dst[index] = src[index];
+		index++;
+		if (!size)
+			dst[index] = '\0';
+	} 
+	return (ft_strlen(src));
 }
