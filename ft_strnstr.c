@@ -17,9 +17,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	char	*first_occurrence;
 
 	first_occurrence = NULL;
-	while (*big)
+	while (*big && len--)
 	{
-		if (!(ft_strncmp(big, little, ft_strlen(little))))
+		if (!(ft_strncmp(big, little, len)))
 			first_occurrence = (char *)big;
 		big++;
 	}
