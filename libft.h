@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
