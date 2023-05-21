@@ -23,10 +23,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	little_length = ft_strlen(little);
 	while (big[index] && index < len && little_length)
 	{
-		if (!ft_strncmp((big + index), little, little_length) && (index + little_length <= len))
+		if (!ft_strncmp((big + index), little, little_length) && (index
+				+ little_length <= len))
 		{
 			first_occurrence = (char *)(big + index);
-			break;
+			break ;
 		}
 		index++;
 	}
