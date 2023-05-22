@@ -12,30 +12,38 @@
 
 #include "libft.h"
 
+static int	delimiter_count(char const *s, char c)
+{
+	size_t	counter;
+	size_t	index;
+
+	counter = 1;
+	index = 0;
+	while (s[index])
+		if (s[index++] == c && s[index] != c)
+			counter++;
+	return (counter);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	size_t	start;
-	size_t	index;
-	size_t	split;
+	size_t	delimiter;
+	size_t 	index;
+	char	*start;
+	char	*string;
 	char	**array;
 
-	start = 0;
-	index = 0;
-	split = 0;
-	while (s[index])
-		if (ft_strchr(s, c))
-			split++;
-	array = malloc(sizeof(char *) * (split + 1));
-	index = 0;
-	split = 0;
 	if (!s)
 		return (NULL);
-	while (s[split])
+	string = ft_strtrim(s, &c);
+	delimiter = delimiter_count(string, c);
+	start = string;
+	array = malloc(sizeof(char *) * (delimiter + 1));
+	index = 0;
+	while (delimiter--)
 	{
-		split = ft_strlen(ft_strchr(s, c));
-		if (s[start] != s[split])
-			array[index] = ft_substr(s + start, start, split - start + 1);
-		start = ++split;
+		array[index++] = ft_substr(start, 0, ft_strlen(start) - ft_strlen(ft_strchr(string, c)) + 1);
+		start = ft_strchr(string, c) + 1;
 	}
 	array[index] = NULL;
 	return (array);
