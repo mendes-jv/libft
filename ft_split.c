@@ -25,10 +25,20 @@ static int	delimiter_count(char const *s, char c)
 	return (counter);
 }
 
+static size_t	ft_strsublen(char *start, char c)
+{
+	size_t	index;
+
+	index = 1;
+	while (*start++ != c)
+		index++;
+	return (index);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	delimiter;
-	size_t 	index;
+	size_t	index;
 	char	*start;
 	char	*string;
 	char	**array;
@@ -42,8 +52,10 @@ char	**ft_split(char const *s, char c)
 	index = 0;
 	while (delimiter--)
 	{
-		array[index++] = ft_substr(start, 0, ft_strlen(start) - ft_strlen(ft_strchr(string, c)) + 1);
+		array[index++] = ft_substr(start, 0, ft_strsublen(start, c) + 1);
 		start = ft_strchr(string, c) + 1;
+		while (*start == c)
+			start++;
 	}
 	array[index] = NULL;
 	return (array);
