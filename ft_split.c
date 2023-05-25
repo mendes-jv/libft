@@ -29,12 +29,9 @@ static size_t	ft_substrlen(char *start, char c)
 {
 	size_t	counter;
 
-	counter = 1;
-	while (*start != c && *start)
-	{
+	counter = 0;
+	while (*start != c && *start++)
 		counter++;
-		start++;
-	}
 	return (counter);
 }
 
@@ -45,23 +42,28 @@ char	**ft_split(char const *s, char c)
 	char	*start;
 	char	*string;
 	char	**arr;
+	
 
 	if (!s)
 		return (NULL);
 	string = ft_strtrim(s, &c);
 	if (!*string)
+	{
+		free(string);
 		return (ft_calloc(1, sizeof(char *)));
-	delimiter = delimiter_count(string, c);
+	}
 	start = string;
+	delimiter = delimiter_count(string, c);
 	arr = ft_calloc(delimiter + 1, sizeof(char *));
 	i = 0;
 	while (delimiter--)
 	{
-		arr[i++] = ft_strtrim(ft_substr(start, 0, ft_substrlen(start, c)), &c);
-		if (ft_strchr(start, c) != NULL)
-			start = ft_strchr(start, c) + 1;
-		while (*start == c && *start)
-			start++;
+		arr[i++] = ft_substr(string, 0, ft_substrlen(string, c));
+		if (ft_strchr(string, c) != NULL)
+			string = ft_strchr(string, c);
+		while (*string == c && *string)
+			string++;
 	}
+	free(start);
 	return (arr);
 }
