@@ -35,35 +35,37 @@ static size_t	ft_substrlen(char *start, char c)
 	return (counter);
 }
 
+static char	**ft_insertstr(char **array, char *string, char c, size_t delimiter)
+{
+	size_t	index;
+
+	index = 0;
+	while (delimiter--)
+	{
+		array[index++] = ft_substr(string, 0, ft_substrlen(string, c));
+		if (ft_strchr(string, c) != NULL)
+			string = ft_strchr(string, c);
+		while (*string == c && *string)
+			string++;
+	}
+	return (array);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	delimiter;
-	size_t	i;
-	char	*start;
 	char	*string;
-	char	**arr;
-	
+	char	**array;
 
-	if (!s)
-		return (NULL);
 	string = ft_strtrim(s, &c);
 	if (!*string)
 	{
 		free(string);
 		return (ft_calloc(1, sizeof(char *)));
 	}
-	start = string;
 	delimiter = delimiter_count(string, c);
-	arr = ft_calloc(delimiter + 1, sizeof(char *));
-	i = 0;
-	while (delimiter--)
-	{
-		arr[i++] = ft_substr(string, 0, ft_substrlen(string, c));
-		if (ft_strchr(string, c) != NULL)
-			string = ft_strchr(string, c);
-		while (*string == c && *string)
-			string++;
-	}
-	free(start);
-	return (arr);
+	array = ft_calloc(delimiter + 1, sizeof(char *));
+	array = ft_insertstr(array, string, c, delimiter);
+	free(string);
+	return (array);
 }
