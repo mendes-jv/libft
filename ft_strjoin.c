@@ -16,7 +16,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*string;
 	size_t	length;
-	
+
 	length = ft_strlen(s1);
 	string = (char *)malloc(length + ft_strlen(s2) + 1);
 	if (string != NULL && s1 != NULL && s2 != NULL)

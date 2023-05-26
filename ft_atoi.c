@@ -15,7 +15,7 @@
 int	ft_atoi(const char *nptr)
 {
 	int	number;
-	int signal;
+	int	signal;
 
 	number = 0;
 	signal = 1;

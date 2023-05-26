@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*pointer;
-	int result;
+	int		result;
 
 	pointer = NULL;
 	result = nmemb * size;
