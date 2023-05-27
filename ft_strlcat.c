@@ -21,13 +21,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	result = 0;
 	index = 0;
 	destiny_length = ft_strlen(dst);
+	result = ft_strlen(src) + destiny_length;
 	if (destiny_length > size)
-		result = ft_strlen(src) + size;
-	else
-		result = ft_strlen(src) + destiny_length;
-	while ((destiny_length + 1) < size && src[index])
-		dst[destiny_length++] = src[index++];
-	if (size)
-		dst[destiny_length + index] = '\0';
+		return (ft_strlen(src) + size);
+	while (index + 1 < (size - destiny_length) && src[index])
+	{
+		dst[destiny_length + index] = src[index];
+		index++;
+	}
+	dst[destiny_length + index] = '\0';
 	return (result);
 }
