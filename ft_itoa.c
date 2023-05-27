@@ -49,6 +49,8 @@ char	*ft_itoa(int n)
 	number = n;
 	length = ft_ilen(number);
 	string = ft_calloc(length + 1, sizeof(char));
+	if (!string)
+		return (NULL);
 	if (number < 0)
 	{
 		number *= -1;

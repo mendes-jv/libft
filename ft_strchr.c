@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 		}
 		s++;
 	}
-	if (!c)
+	if (!c || *s == (unsigned char)c)
 		first_occurrence = (char *)s;
 	return (first_occurrence);
 }

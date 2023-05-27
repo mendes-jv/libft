@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	index;
 
 	string = ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	if (!string)
+		return (NULL);
 	index = 0;
 	while (s[index])
 	{

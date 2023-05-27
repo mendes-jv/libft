@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	delimiter_count(char const *s, char c)
 {
@@ -58,6 +59,8 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 
 	string = ft_strtrim(s, &c);
+	if (!string)
+		return (NULL);
 	if (!*string)
 	{
 		free(string);
