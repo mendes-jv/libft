@@ -12,33 +12,8 @@
 
 #include "libft.h"
 
-static size_t	ft_ilen(long number)
-{
-	size_t	counter;
-
-	counter = 0;
-	if (number <= 0)
-	{
-		number *= -1;
-		counter++;
-	}
-	while (number)
-	{
-		number /= 10;
-		counter++;
-	}
-	return (counter);
-}
-
-static void	ft_putnbr_str(long number, size_t index, size_t length,
-		char *string)
-{
-	while (index < length)
-	{
-		string[--length] = (number % 10) + '0';
-		number /= 10;
-	}
-}
+static size_t	ft_ilen(long number);
+static void		ft_putnbr_str(long n, size_t i, size_t len, char *str);
 
 char	*ft_itoa(int n)
 {
@@ -60,4 +35,31 @@ char	*ft_itoa(int n)
 	else
 		ft_putnbr_str(number, 0, length, string);
 	return (string);
+}
+
+static size_t	ft_ilen(long number)
+{
+	size_t	counter;
+
+	counter = 0;
+	if (number <= 0)
+	{
+		number *= -1;
+		counter++;
+	}
+	while (number)
+	{
+		number /= 10;
+		counter++;
+	}
+	return (counter);
+}
+
+static void	ft_putnbr_str(long n, size_t i, size_t len, char *str)
+{
+	while (i < len)
+	{
+		str[--len] = (n % 10) + '0';
+		n /= 10;
+	}
 }

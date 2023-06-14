@@ -15,23 +15,22 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	char	*first_occurrence;
-	size_t	index;
-	size_t	little_length;
+	size_t	i;
+	size_t	l_len;
 
 	first_occurrence = NULL;
-	index = 0;
-	little_length = ft_strlen(little);
-	while (big[index] && index < len && little_length)
+	i = 0;
+	l_len = ft_strlen(little);
+	while (big[i] && i < len && l_len)
 	{
-		if (!ft_strncmp((big + index), little, little_length) && (index
-				+ little_length <= len))
+		if (!ft_strncmp((big + i), little, l_len) && (i + l_len <= len))
 		{
-			first_occurrence = (char *)(big + index);
+			first_occurrence = (char *)(big + i);
 			break ;
 		}
-		index++;
+		i++;
 	}
-	if (!little_length)
+	if (!l_len)
 		first_occurrence = (char *)big;
 	return (first_occurrence);
 }

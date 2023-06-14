@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s)
 
 	source_length = ft_strlen(s) + 1;
 	destiny = (char *)malloc(source_length);
-	if (destiny != NULL && s != NULL)
+	if (destiny)
 		ft_strlcpy(destiny, s, source_length);
 	return (destiny);
 }

@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	length = ft_strlen(s1);
 	string = (char *)malloc(length + ft_strlen(s2) + 1);
-	if (string != NULL && s1 != NULL && s2 != NULL)
+	if (string && s1 && s2)
 	{
 		ft_strlcpy(string, s1, length + 1);
 		while (*s2)

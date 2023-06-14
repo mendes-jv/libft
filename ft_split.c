@@ -12,44 +12,9 @@
 
 #include "libft.h"
 
-static int	delimiter_count(char const *s, char c)
-{
-	size_t	counter;
-	size_t	index;
-
-	counter = 1;
-	index = 0;
-	while (s[index])
-		if (s[index++] == c && s[index] != c)
-			counter++;
-	return (counter);
-}
-
-static size_t	ft_substrlen(char *start, char c)
-{
-	size_t	counter;
-
-	counter = 0;
-	while (*start != c && *start++)
-		counter++;
-	return (counter);
-}
-
-static char	**ft_insertstr(char **array, char *string, char c, size_t delimiter)
-{
-	size_t	index;
-
-	index = 0;
-	while (delimiter--)
-	{
-		array[index++] = ft_substr(string, 0, ft_substrlen(string, c));
-		if (ft_strchr(string, c) != NULL)
-			string = ft_strchr(string, c);
-		while (*string == c && *string)
-			string++;
-	}
-	return (array);
-}
+static int		delimiter_count(char const *s, char c);
+static char		**ft_insertstr(char **arr, char *str, char c, size_t delimiter);
+static size_t	ft_substrlen(char *start, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -70,4 +35,43 @@ char	**ft_split(char const *s, char c)
 	array = ft_insertstr(array, string, c, delimiter);
 	free(string);
 	return (array);
+}
+
+static int	delimiter_count(char const *s, char c)
+{
+	size_t	counter;
+	size_t	index;
+
+	counter = 1;
+	index = 0;
+	while (s[index])
+		if (s[index++] == c && s[index] != c)
+			counter++;
+	return (counter);
+}
+
+static char	**ft_insertstr(char **arr, char *str, char c, size_t delimiter)
+{
+	size_t	index;
+
+	index = 0;
+	while (delimiter--)
+	{
+		arr[index++] = ft_substr(str, 0, ft_substrlen(str, c));
+		if (ft_strchr(str, c) != NULL)
+			str = ft_strchr(str, c);
+		while (*str == c && *str)
+			str++;
+	}
+	return (arr);
+}
+
+static size_t	ft_substrlen(char *start, char c)
+{
+	size_t	counter;
+
+	counter = 0;
+	while (*start != c && *start++)
+		counter++;
+	return (counter);
 }

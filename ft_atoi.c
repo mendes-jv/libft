@@ -22,15 +22,9 @@ int	ft_atoi(const char *nptr)
 	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
-	{
-		if (*nptr == '-')
+		if (*nptr++ == '-')
 			signal = -1;
-		nptr++;
-	}
 	while (ft_isdigit(*nptr))
-	{
-		number = (number * 10) + (*nptr - '0');
-		nptr++;
-	}
+		number = (number * 10) + (*nptr++ - '0');
 	return (number * signal);
 }
