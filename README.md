@@ -10,7 +10,7 @@
 
 <div align = center>
 
-![Alt text](mdassets/Screenshot%20from%202023-05-24%2014-16-33.png) 
+![Alt text](mdassets/libft_grade.png) 
 
 ![](https://game.42sp.org.br/static/assets/achievements/libftm.png)
 
