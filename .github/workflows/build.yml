@@ -1,0 +1,16 @@
+name: build
+
+on:
+  push:
+    branches:
+    - main
+jobs:
+   build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: libft v1.0
+    steps:
+      - uses: actions/checkout@v2
+      - name: make
+        run: make
