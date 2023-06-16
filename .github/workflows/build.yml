@@ -9,7 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
+<<<<<<< HEAD
         working-directory: libft v1.0
+=======
+        working-directory: src
+>>>>>>> 5e1743e60b983c19d9756a06be3f4b0f20155326
     steps:
       - uses: actions/checkout@v2
       - name: make

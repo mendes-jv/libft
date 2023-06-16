@@ -82,7 +82,7 @@ libft is a project where we learn to recriate some of the standard functions in 
 First, clone this repository and `cd` into it:
 
 ```zsh
-$ git clone https://github.com/0xEDU/libft; cd libft
+$ git clone https://github.com/0xEDU/libft; cd libft/src
 ```
 
 Compile the library with:
