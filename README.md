@@ -2,7 +2,7 @@
 
 # Libft: Create you own C library.
   
-[![norminette](https://github.com/mendes-jv/libft/actions/workflows/norminette.yml/badge.svg)](https://github.com/mendes-jv/libft/actions/workflows/norminette.yml) [![build](https://github.com/mendes-jv/libft/actions/workflows/build.yml/badge.svg)](https://github.com/mendes-jv/libft/actions/workflows/build.yml)
+[![norminette](https://github.com/mendes-jv/libft/actions/workflows/norminette.yml/badge.svg)](https://github.com/mendes-jv/libft/actions/workflows/main.yml) [![build](https://github.com/mendes-jv/libft/actions/workflows/build.yml/badge.svg)](https://github.com/mendes-jv/libft/actions/workflows/main.yml)
 
  </div>
 
