@@ -2,16 +2,6 @@ name: main
 on: [push, pull_request]
 
 jobs:
-  build:
-    name: build
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: src
-    steps:
-      - uses: actions/checkout@v2
-      - name: make
-        run: make
   norminette:
     name: norminette
     runs-on: ubuntu-latest
