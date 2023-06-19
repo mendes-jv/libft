@@ -31,7 +31,7 @@
 
 ## Description:
 
-libft is a project where we learn to recriate some of the standard functions in C language.
+Libft is a project where we recreate some of the standard functions of the C language, in order to to form our own library.
 
 ## The project:
 
