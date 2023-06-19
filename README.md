@@ -10,9 +10,7 @@
 
 <div align = center>
 
-![Alt text](Libft: 125/100) 
-
-[[![](https://game.42sp.org.br/static/assets/achievements/libftm.png)](https://badge42.vercel.app/api/v2/cl0z8sbuu001509jthfclxpdu/project/2073454)](https://badge42.vercel.app/api/v2/cl0z8sbuu001509jthfclxpdu/project/2073454)
+[![jovicto2's 42 Libft Score](https://badge42.vercel.app/api/v2/clj244ax4006908l8zkjw830s/project/3081696)](https://github.com/JaeSeoKim/badge42)
 
  </div>
 
