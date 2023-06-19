@@ -95,13 +95,13 @@ Libft is the first project at 42 programming school, and it consists on recreate
 First, clone this repository and `cd` into it:
 
 ```zsh
-$ git clone https://github.com/mendes-jv/libft; cd libft/src
+git clone https://github.com/mendes-jv/libft; cd libft/src
 ```
 
 Compile the library with:
 
 ```zsh
-$ make
+make
 ```
 
 or
