@@ -81,14 +81,18 @@ Libft is the first project at 42 programming school, and it consists on recreate
 
 ### Linked list functions (Libft's Project Bonus Part)
 
-- [`ft_lstnew`](src/ft_lstnew_bonus.c)	- creates a new list element
-- [`ft_lstadd_front`](src/ft_lstadd_front_bonus.c)	- adds an element at the beginning of a list
-- [`ft_lstsize`](src/ft_lstsize_bonus.c)	- counts the number of elements in a list
-- [`ft_lstlast`](src/ft_lstlast_bonus.c)	- returns the last element of the list
-- [`ft_lstadd_back`](src/ft_lstadd_back_bonus.c)	- adds an element at the end of a list
-- [`ft_lstclear`](src/ft_lstclear_bonus.c)	- deletes and free list
-- [`ft_lstiter`](src/ft_lstiter_bonus.c)	- applies a function to each element of a list
-- [`ft_lstmap`](src/ft_lstmap_bonus.c)	- applies a function to each element of a list
+- [`ft_lstnew`](src/ft_lstnew.c)	- creates a new list element
+- [`ft_lstadd_front`](src/ft_lstadd_front.c)	- adds an element at the beginning of a list
+- [`ft_lstsize`](src/ft_lstsize.c)	- counts the number of elements in a list
+- [`ft_lstlast`](src/ft_lstlast.c)	- returns the last element of the list
+- [`ft_lstadd_back`](src/ft_lstadd_back.c)	- adds an element at the end of a list
+- [`ft_lstclear`](src/ft_lstclear.c)	- deletes and free list
+- [`ft_lstiter`](src/ft_lstiter.c)	- applies a function to each element of a list
+- [`ft_lstmap`](src/ft_lstmap.c)	- applies a function to each element of a list
+
+### Functions from others 42 projects
+
+- [`ft_get_next_line`](src/ft_get_next_line.c)	- reads any valid file line by line until the end ([see the full project of get next line](https://github.com/mendes-jv/get-next-line))
 
 ## How to execute:
 
@@ -102,12 +106,6 @@ Compile the library with:
 
 ```zsh
 make
-```
-
-or
-
-```sh
-make bonus
 ```
 
 Now you have a file called `libft.a`, use any function of the libft and compile you code with the archive.   
