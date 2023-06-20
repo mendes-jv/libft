@@ -17,6 +17,7 @@
 # include <unistd.h>
 
 //mandatory
+
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
@@ -53,11 +54,13 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 //bonus
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
 void	ft_lstadd_back(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstnew(void *content);
@@ -67,5 +70,17 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+//extras
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 100000
+# endif
+
+# ifndef FD_MAX
+#  define FD_MAX 1024
+# endif
+
+char	*ft_get_next_line(int fd);
 
 #endif
