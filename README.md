@@ -1,6 +1,6 @@
 <div align = center>
 
-# Libft: Create you own C library.
+# Libft: Create you own C library
 
 [![Norminette and Build](https://github.com/mendes-jv/libft/actions/workflows/main.yml/badge.svg)](https://github.com/mendes-jv/libft/actions/workflows/main.yml)
 ![42 São Paulo](https://img.shields.io/badge/42-SP-1E2952)
