@@ -37,63 +37,78 @@ Libft is the first project at 42 programming school, and it consists on recreate
 
 ### Functions from `<ctype.h>`
 
-- [`ft_isalpha`](src/ft_isalpha.c)	- checks  for  an  alphabetic  character
-- [`ft_isdigit`](src/ft_isdigit.c)	- checks for a digit (0 through 9).
-- [`ft_isalnum`](src/ft_isalnum.c)	- checks for an alphanumeric character
-- [`ft_isascii`](src/ft_isascii.c)	- checks whether c fits into the ASCII character set
-- [`ft_isprint`](src/ft_isprint.c)	- checks for any printable character
-- [`ft_toupper`](src/ft_toupper.c)	- convert char to uppercase
-- [`ft_tolower`](src/ft_tolower.c)	- convert char to lowercase
+- [`ft_isalpha`](sources/ft_isalpha.c)	- checks  for  an  alphabetic  character
+- [`ft_isdigit`](sources/ft_isdigit.c)	- checks for a digit (0 through 9).
+- [`ft_isalnum`](sources/ft_isalnum.c)	- checks for an alphanumeric character
+- [`ft_isascii`](sources/ft_isascii.c)	- checks whether c fits into the ASCII character set
+- [`ft_isprint`](sources/ft_isprint.c)	- checks for any printable character
+- [`ft_toupper`](sources/ft_toupper.c)	- converts char to uppercase
+- [`ft_tolower`](sources/ft_tolower.c)	- converts char to lowercase
 
 ### Functions from `<string.h>`
 
-- [`ft_memset`](src/ft_memset.c)	- fill memory with a constant byte
-- [`ft_strlen`](src/ft_strlen.c)	- calculate the length of a string
-- [`ft_bzero`](src/ft_bzero.c)	- zero a byte string
-- [`ft_memcpy`](src/ft_memcpy.c)	- copy memory area
-- [`ft_memmove`](src/ft_memmove.c)	- copy memory area
-- [`ft_strlcpy`](src/ft_strlcpy.c)	- copy string to an specific size
-- [`ft_strlcat`](src/ft_strlcat.c)	- concatenate string to an specific size
-- [`ft_strchr`](src/ft_strchr.c)	- locate character in string
-- [`ft_strrchr`](src/ft_strrchr.c)	- locate character in string
-- [`ft_strncmp`](src/ft_strncmp.c)	- compare two strings
-- [`ft_memchr`](src/ft_memchr.c)	- scan memory for a character
-- [`ft_memcmp`](src/ft_memcmp.c)	- compare memory areas
-- [`ft_strnstr`](src/ft_strnstr.c)	- locate a substring in a string
-- [`ft_strdup`](src/ft_strdup.c)	- creates a dupplicate for the string passed as parameter
+- [`ft_memset`](sources/ft_memset.c)	- fills memory with a constant byte
+- [`ft_strlen`](sources/ft_strlen.c)	- calculates the length of a string
+- [`ft_bzero`](sources/ft_bzero.c)	- zeroes a byte string
+- [`ft_memcpy`](sources/ft_memcpy.c)	- copies memory area
+- [`ft_memmove`](sources/ft_memmove.c)	- copies memory area
+- [`ft_strlcpy`](sources/ft_strlcpy.c)	- copies string to an specific size
+- [`ft_strlcat`](sources/ft_strlcat.c)	- concatenates string to an specific size
+- [`ft_strchr`](sources/ft_strchr.c)	- locates character in string
+- [`ft_strrchr`](sources/ft_strrchr.c)	- locates character in string
+- [`ft_strncmp`](sources/ft_strncmp.c)	- compares two strings
+- [`ft_memchr`](sources/ft_memchr.c)	- scans memory for a character
+- [`ft_memcmp`](sources/ft_memcmp.c)	- compares memory areas
+- [`ft_strnstr`](sources/ft_strnstr.c)	- locates a substring in a string
+- [`ft_strdup`](sources/ft_strdup.c)	- creates a dupplicate for the string passed as parameter
 
 ### Functions from `<stdlib.h>`
-- [`ft_atoi`](src/ft_atoi.c)	- convert a string to an integer
-- [`ft_calloc`](src/ft_calloc.c)	- allocates memory and sets its bytes' values to 0
+- [`ft_atoi`](sources/ft_atoi.c)	- converts a string to an integer
+- [`ft_calloc`](sources/ft_calloc.c)	- allocates memory and sets its bytes' values to 0
 
 ### Non-standard functions
-- [`ft_substr`](src/ft_substr.c)	- returns a substring from a string
-- [`ft_strjoin`](src/ft_strjoin.c)	- concatenates two strings
-- [`ft_strtrim`](src/ft_strtrim.c)	- trims the beginning and end of string with specific set of chars
-- [`ft_split`](src/ft_split.c)	- splits a string using a char as parameter
-- [`ft_itoa`](src/ft_itoa.c)	- converts a number into a string
-- [`ft_strmapi`](src/ft_strmapi.c)	- applies a function to each character of a string
-- [`ft_striteri`](src/ft_striteri.c)	- applies a function to each character of a string
-- [`ft_putchar_fd`](src/ft_putchar_fd.c)	- output a char to a file descriptor
-- [`ft_putstr_fd`](src/ft_putstr_fd.c)	- output a string to a file descriptor
-- [`ft_putendl_fd`](src/ft_putendl_fd.c)	- output a string to a file descriptor, followed by a new line
-- [`ft_putnbr_fd`](src/ft_putnbr_fd.c)	- output a number to a file descriptor
+- [`ft_substr`](sources/ft_substr.c)	- returns a substring from a string
+- [`ft_strjoin`](sources/ft_strjoin.c)	- concatenates two strings
+- [`ft_strtrim`](sources/ft_strtrim.c)	- trims the beginning and end of string with specific set of chars
+- [`ft_split`](sources/ft_split.c)	- splits a string using a char as parameter
+- [`ft_itoa`](sources/ft_itoa.c)	- converts a number into a string
+- [`ft_strmapi`](sources/ft_strmapi.c)	- applies a function to each character of a string
+- [`ft_striteri`](sources/ft_striteri.c)	- applies a function to each character of a string
+- [`ft_putchar_fd`](sources/ft_putchar_fd.c)	- outputs a char to a file descriptor
+- [`ft_putstr_fd`](sources/ft_putstr_fd.c)	- outputs a string to a file descriptor
+- [`ft_putendl_fd`](sources/ft_putendl_fd.c)	- outputs a string to a file descriptor, followed by a new line
+- [`ft_putnbr_fd`](sources/ft_putnbr_fd.c)	- outputs a number to a file descriptor
 
 ### Linked list functions (Libft's Project Bonus Part)
 
-- [`ft_lstnew`](src/ft_lstnew.c)	- creates a new list element
-- [`ft_lstadd_front`](src/ft_lstadd_front.c)	- adds an element at the beginning of a list
-- [`ft_lstsize`](src/ft_lstsize.c)	- counts the number of elements in a list
-- [`ft_lstlast`](src/ft_lstlast.c)	- returns the last element of the list
-- [`ft_lstadd_back`](src/ft_lstadd_back.c)	- adds an element at the end of a list
-- [`ft_lstclear`](src/ft_lstclear.c)	- deletes and free list
-- [`ft_lstiter`](src/ft_lstiter.c)	- applies a function to each element of a list
-- [`ft_lstmap`](src/ft_lstmap.c)	- applies a function to each element of a list
+- [`ft_lstnew`](sources/ft_lstnew.c)	- creates a new list element
+- [`ft_lstadd_front`](sources/ft_lstadd_front.c)	- adds an element at the beginning of a list
+- [`ft_lstsize`](sources/ft_lstsize.c)	- counts the number of elements in a list
+- [`ft_lstlast`](sources/ft_lstlast.c)	- returns the last element of the list
+- [`ft_lstadd_back`](sources/ft_lstadd_back.c)	- adds an element at the end of a list
+- [`ft_lstclear`](sources/ft_lstclear.c)	- deletes and free list
+- [`ft_lstiter`](sources/ft_lstiter.c)	- applies a function to each element of a list
+- [`ft_lstmap`](sources/ft_lstmap.c)	- applies a function to each element of a list
 
 ### Functions from others 42 projects
 
-- [`ft_get_next_line`](src/ft_get_next_line.c)  - reads any valid file line by line until the end ([see the full project of get next line](https://github.com/mendes-jv/get-next-line))
-- [`ft_printf`](src/ft_printf.c)  - my version of printf from `stdio.h` ([see the full project of ft_printf](https://github.com/mendes-jv/ft-printf))
+- [`ft_get_next_line`](sources/ft_get_next_line.c)  - reads any valid file line by line until the end ([see the full project of get next line](https://github.com/mendes-jv/get-next-line))
+- [`ft_printf`](sources/ft_printf.c)  - my version of printf from `stdio.h` ([see the full project of ft_printf](https://github.com/mendes-jv/ft-printf))
+
+### Functions added after finishing the project
+
+- [`ft_lputaddress_fd`](sources/ft_lputaddress_fd.c)	- outputs an address and returns its length
+- [`ft_lputbin_fd`](sources/ft_lputbin_fd.c)	- outputs a number in binary representation and returns its length
+- [`ft_lputdouble_fd`](sources/ft_lputdouble_fd.c)	- outputs a double number and returns its length
+- [`ft_lputhexa_fd`](sources/ft_lputhexa_fd.c)	- outputs a number in hexadecimal representation and returns its length
+- [`ft_lputnbr_fd`](sources/ft_lputnbr_fd.c)	- outputs a integer and returns its length
+- [`ft_lputoctal_fd`](sources/ft_lputoctal_fd.c)	- outputs a number in octal representation and returns its length
+- [`ft_lputstr_fd`](sources/ft_lputstr_fd.c)	- outputs a string and returns its length
+- [`ft_itoa_base`](sources/ft_itoa_base.c)	- converts a number in a string and applies the number system specified
+- [`ft_itoa_hex`](sources/ft_itoa_hex.c)	- converts a number in a string and converts it to hexadecimal base
+- [`ft_ptoa`](sources/ft_ptoa.c)	- converts an address in a string
+- [`ft_ctoa`](sources/ft_ctoa.c)	- converts a single char in a string (char + '\0' termination)
+- [`ft_check_string`](sources/ft_check_string.c)	- checks if a string is a null pointer and returns "(null)" if it is
 
 ## How to execute:
 
@@ -109,7 +124,7 @@ Compile the library with:
 make
 ```
 
-Now you have a file called `libft.a`, use any function of the libft and compile you code with the archive.   
+Now you have a file called `libft.a`, use any function of the libft and compile your code with the archive.   
 
 ```sh
 [gcc | cc | clang] [flags] main.c libft.a && ./a.out
