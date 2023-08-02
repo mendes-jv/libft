@@ -12,9 +12,6 @@ jobs:
       name: Build
       needs: norminette
       runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: src
       steps:
         - uses: actions/checkout@v2
         - name: make
