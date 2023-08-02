@@ -92,14 +92,15 @@ Libft is the first project at 42 programming school, and it consists on recreate
 
 ### Functions from others 42 projects
 
-- [`ft_get_next_line`](src/ft_get_next_line.c)	- reads any valid file line by line until the end ([see the full project of get next line](https://github.com/mendes-jv/get-next-line))
+- [`ft_get_next_line`](src/ft_get_next_line.c)  - reads any valid file line by line until the end ([see the full project of get next line](https://github.com/mendes-jv/get-next-line))
+- [`ft_printf`](src/ft_printf.c)  - my version of printf from `stdio.h` ([see the full project of ft_printf](https://github.com/mendes-jv/ft-printf))
 
 ## How to execute:
 
 First, clone this repository and `cd` into it:
 
 ```zsh
-git clone https://github.com/mendes-jv/libft; cd libft/src
+git clone https://github.com/mendes-jv/libft && cd libft
 ```
 
 Compile the library with:
@@ -111,5 +112,5 @@ make
 Now you have a file called `libft.a`, use any function of the libft and compile you code with the archive.   
 
 ```sh
-[gcc | cc | clang] [flags] main.c libft/src/libft.a
+[gcc | cc | clang] [flags] main.c libft.a && ./a.out
 ```
