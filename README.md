@@ -92,8 +92,8 @@ Libft is the first project at 42 programming school, and it consists on recreate
 
 ### Functions from others 42 projects
 
-- [`ft_get_next_line`](sources/ft_get_next_line.c)  - reads any valid file line by line until the end ([see the full project of get next line](https://github.com/mendes-jv/get-next-line))
-- [`ft_printf`](sources/ft_printf.c)  - my version of printf from `stdio.h` ([see the full project of ft_printf](https://github.com/mendes-jv/ft-printf))
+- [`get_next_line`](sources/ft_get_next_line.c)  - reads any valid file line by line until the end ([see the full project of get next line](https://github.com/mendes-jv/get-next-line))
+- [`ft_printf`](sources/ft_printf.c)  - my version of printf functions from `stdio.h` ([see the full project of ft_printf](https://github.com/mendes-jv/ft-printf))
 
 ### Functions added after finishing the project
 
