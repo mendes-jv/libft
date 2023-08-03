@@ -51,16 +51,16 @@ Libft is the first project at 42 programming school, and it consists on recreate
 - [`ft_strlen`](sources/ft_strlen.c)	- calculates the length of a string
 - [`ft_bzero`](sources/ft_bzero.c)	- zeroes a byte string
 - [`ft_memcpy`](sources/ft_memcpy.c)	- copies memory area
-- [`ft_memmove`](sources/ft_memmove.c)	- copies memory area
-- [`ft_strlcpy`](sources/ft_strlcpy.c)	- copies string to an specific size
-- [`ft_strlcat`](sources/ft_strlcat.c)	- concatenates string to an specific size
+- [`ft_memmove`](sources/ft_memmove.c)	- copies memory area without overlapping
+- [`ft_strlcpy`](sources/ft_strlcpy.c)	- copies string to a specific size
+- [`ft_strlcat`](sources/ft_strlcat.c)	- concatenates string to a specific size
 - [`ft_strchr`](sources/ft_strchr.c)	- locates character in string
 - [`ft_strrchr`](sources/ft_strrchr.c)	- locates character in string
 - [`ft_strncmp`](sources/ft_strncmp.c)	- compares two strings
 - [`ft_memchr`](sources/ft_memchr.c)	- scans memory for a character
 - [`ft_memcmp`](sources/ft_memcmp.c)	- compares memory areas
 - [`ft_strnstr`](sources/ft_strnstr.c)	- locates a substring in a string
-- [`ft_strdup`](sources/ft_strdup.c)	- creates a dupplicate for the string passed as parameter
+- [`ft_strdup`](sources/ft_strdup.c)	- creates a duplicate for the string passed as parameter
 
 ### Functions from `<stdlib.h>`
 - [`ft_atoi`](sources/ft_atoi.c)	- converts a string to an integer
@@ -84,11 +84,11 @@ Libft is the first project at 42 programming school, and it consists on recreate
 - [`ft_lstnew`](sources/ft_lstnew.c)	- creates a new list element
 - [`ft_lstadd_front`](sources/ft_lstadd_front.c)	- adds an element at the beginning of a list
 - [`ft_lstsize`](sources/ft_lstsize.c)	- counts the number of elements in a list
-- [`ft_lstlast`](sources/ft_lstlast.c)	- returns the last element of the list
+- [`ft_lstlast`](sources/ft_lstlast.c)	- returns the last element of a list
 - [`ft_lstadd_back`](sources/ft_lstadd_back.c)	- adds an element at the end of a list
 - [`ft_lstclear`](sources/ft_lstclear.c)	- deletes and free list
 - [`ft_lstiter`](sources/ft_lstiter.c)	- applies a function to each element of a list
-- [`ft_lstmap`](sources/ft_lstmap.c)	- applies a function to each element of a list
+- [`ft_lstmap`](sources/ft_lstmap.c)	- applies a function to each element of a list and returns a new list with the return of all nodes iteration
 
 ### Functions from others 42 projects
 
