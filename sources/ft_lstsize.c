@@ -15,14 +15,9 @@
 int	ft_lstsize(t_list *lst)
 {
 	int		index;
-	t_list	*node;
 
 	index = 0;
-	node = lst;
-	while (node)
-	{
-		node = node->next;
-		index++;
-	}
-	return (index);
+	while (++index && lst)
+		lst = lst->next;
+	return (--index);
 }
