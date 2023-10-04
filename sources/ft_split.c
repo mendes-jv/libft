@@ -12,66 +12,49 @@
 
 #include "libft.h"
 
-static int		delimiter_count(char const *s, char c);
-static char		**ft_insertstr(char **arr, char *str, char c, size_t delimiter);
-static size_t	ft_substrlen(char *start, char c);
+static size_t	ft_count_words(char const *s, char c)
+{
+	size_t	count;
+
+	if (!*s)
+		return (0);
+	count = 0;
+	while (*s)
+	{
+		while (*s == c)
+			s++;
+		if (*s)
+			count++;
+		while (*s != c && *s)
+			s++;
+	}
+	return (count);
+}
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	delimiter;
-	char	*string;
 	char	**array;
+	size_t	word_length;
+	int		index;
 
-	string = ft_strtrim(s, &c);
-	if (!string)
-		return (NULL);
-	if (!*string)
+	array = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !array)
+		return (0);
+	index = 0;
+	while (*s)
 	{
-		free(string);
-		return (ft_calloc(1, sizeof(char *)));
+		while (*s == c && *s)
+			s++;
+		if (*s)
+		{
+			if (!ft_strchr(s, c))
+				word_length = ft_strlen(s);
+			else
+				word_length = ft_strchr(s, c) - s;
+			array[index++] = ft_substr(s, 0, word_len);
+			s += word_len;
+		}
 	}
-	delimiter = delimiter_count(string, c);
-	array = ft_calloc(delimiter + 1, sizeof(char *));
-	array = ft_insertstr(array, string, c, delimiter);
-	free(string);
+	array[index] = NULL;
 	return (array);
-}
-
-static int	delimiter_count(char const *s, char c)
-{
-	size_t	counter;
-	size_t	index;
-
-	counter = 1;
-	index = 0;
-	while (s[index])
-		if (s[index++] == c && s[index] != c)
-			counter++;
-	return (counter);
-}
-
-static char	**ft_insertstr(char **arr, char *str, char c, size_t delimiter)
-{
-	size_t	index;
-
-	index = 0;
-	while (delimiter--)
-	{
-		arr[index++] = ft_substr(str, 0, ft_substrlen(str, c));
-		if (ft_strchr(str, c) != NULL)
-			str = ft_strchr(str, c);
-		while (*str == c && *str)
-			str++;
-	}
-	return (arr);
-}
-
-static size_t	ft_substrlen(char *start, char c)
-{
-	size_t	counter;
-
-	counter = 0;
-	while (*start != c && *start++)
-		counter++;
-	return (counter);
 }
