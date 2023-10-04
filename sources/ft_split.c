@@ -51,8 +51,8 @@ char	**ft_split(char const *s, char c)
 				word_length = ft_strlen(s);
 			else
 				word_length = ft_strchr(s, c) - s;
-			array[index++] = ft_substr(s, 0, word_len);
-			s += word_len;
+			array[index++] = ft_substr(s, 0, word_length);
+			s += word_length;
 		}
 	}
 	array[index] = NULL;
