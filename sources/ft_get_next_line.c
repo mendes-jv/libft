@@ -16,7 +16,7 @@ static char	*ft_buffertrim(char *buffer);
 static char	*ft_getline(char *buffer);
 static char	*ft_readline(int fd, char *buffer);
 
-char	*get_next_line(int fd)
+char	*ft_get_next_line(int fd)
 {
 	char		*line;
 	static char	*buffer[FD_MAX];
