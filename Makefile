@@ -6,7 +6,7 @@
 #    By: jovicto2 <jovicto2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/07 19:06:56 by jovicto2          #+#    #+#              #
-#    Updated: 2023/10/29 04:48:17 by jovicto2         ###   ########.org.br    #
+#    Updated: 2023/10/29 04:55:20 by jovicto2         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ HEADER = includes/
 
 AR = ar -rcs
 
-FLAGS = -Wall -Wextra -Werror -g3
+FLAGS = -Wall -Wextra -Werror -Wunreachable-code -0fast -g3 -O3
 
 OBJS = ${SRC:$(PATH_SRC)%.c=$(PATH_OBJ)%.o}
 
