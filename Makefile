@@ -32,7 +32,7 @@ HEADER = includes/
 
 AR = ar -rcs
 
-FLAGS = -Wall -Wextra -Werror -Wunreachable-code -0fast -g3 -O3
+FLAGS = -Wall -Wextra -Werror -Wunreachable-code -Ofast -g3 -O3
 
 OBJS = ${SRC:$(PATH_SRC)%.c=$(PATH_OBJ)%.o}
 
