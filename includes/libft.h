@@ -6,7 +6,7 @@
 /*   By: jovicto2 <jovicto2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 17:54:09 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/08/02 16:51:59 by jovicto2         ###   ########.org.br   */
+/*   Updated: 2023/10/29 04:46:23 by jovicto2         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,4 +179,12 @@ void				ft_apply_conversion(t_parameters *params, ssize_t *conv_len,
 void				ft_apply_zero_flag(t_parameters *params, ssize_t *conv_len,
 						long *index, size_t *pb);
 void				ft_apply_prefixes(t_parameters *params, size_t *pb);
+
+//Fdf
+
+void				ft_arr_for_each(void **array, void (*array_f)(void *),
+						void (*index_f)(void *));
+size_t				ft_arr_len(char **array);
+char				***ft_arr_split(char **array, char delimiter);
+void				ft_for_each(void **array, void (*f)(void *));
 #endif

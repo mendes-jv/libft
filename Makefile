@@ -6,7 +6,7 @@
 #    By: jovicto2 <jovicto2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/07 19:06:56 by jovicto2          #+#    #+#              #
-#    Updated: 2023/08/02 16:31:24 by jovicto2         ###   ########.org.br    #
+#    Updated: 2023/10/29 04:48:17 by jovicto2         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,9 @@ SRC = $(addprefix $(PATH_SRC), ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii
 		ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
 		ft_lstiter.c ft_lstmap.c ft_get_next_line.c ft_lputstr_fd.c ft_lputaddress_fd.c ft_lputhexa_fd.c ft_lputoctal_fd.c \
 		ft_lputdouble_fd.c ft_lputbin_fd.c ft_lputnbr_fd.c ft_itoa_base.c ft_ptoa.c ft_ctoa.c ft_itoa_hex.c ft_check_string.c \
-		ft_printf.c ft_manage_params.c ft_write_params.c ft_apply_flags.c)
+		ft_printf.c ft_manage_params.c ft_write_params.c ft_apply_flags.c \
+		ft_for_each.c ft_arr_for_each.c ft_arr_split.c ft_arr_len.c \
+		ft_ternary.c)
 
 HEADER = includes/
 
