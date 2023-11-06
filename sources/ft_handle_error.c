@@ -12,7 +12,7 @@
 
 #include "../includes/libft.h"
 
-void	handle_error(const char *message)
+void	ft_handle_error(const char *message)
 {
 	if (errno)
 		perror(message);
