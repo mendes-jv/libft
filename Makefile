@@ -6,7 +6,7 @@
 #    By: jovicto2 <jovicto2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/07 19:06:56 by jovicto2          #+#    #+#              #
-#    Updated: 2023/10/29 04:55:20 by jovicto2         ###   ########.org.br    #
+#    Updated: 2023/11/06 17:24:21 by jovicto2         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC = $(addprefix $(PATH_SRC), ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii
 		ft_lputdouble_fd.c ft_lputbin_fd.c ft_lputnbr_fd.c ft_itoa_base.c ft_ptoa.c ft_ctoa.c ft_itoa_hex.c ft_check_string.c \
 		ft_printf.c ft_manage_params.c ft_write_params.c ft_apply_flags.c \
 		ft_for_each.c ft_arr_for_each.c ft_arr_split.c ft_arr_len.c \
-		ft_ternary.c)
+		ft_ternary.c ft_handle_error.c)
 
 HEADER = includes/
 
