@@ -20,7 +20,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-// Libft
+//Libft
 int					ft_atoi(const char *nptr);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t nmemb, size_t size);
@@ -74,61 +74,61 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
-// Get Next Line
+//Get Next Line
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 100000
-# endif
+# endif //BUFFER_SIZE
 
 # ifndef FD_MAX
 #  define FD_MAX 1024
-# endif
+# endif //FD_MAX
 
 char				*ft_get_next_line(int fd);
 
-// Prinft
+//Prinft
 # ifndef NULL_STRING
 #  define NULL_STRING "(null)"
-# endif
+# endif //NULL_STRING
 
 # ifndef NULL_POINTER
 #  define NULL_POINTER "(nil)"
-# endif
+# endif //NULL_POINTER
 
 # ifndef PRINTF_ERROR
 #  define PRINTF_ERROR -1
-# endif
+# endif //PRINTF_ERROR
 
 # ifndef STDOUT_FD
 #  define STDOUT_FD 1
-# endif
+# endif //STDOUT_FD
 
 # ifndef NOT_SPEC
 #  define NOT_SPEC -1
-# endif
+# endif //NOT_SPEC
 
 # ifndef FLAGS
 #  define FLAGS "-+ 0#"
-# endif
+# endif //FLAGS
 
 # ifndef UPPER_HEXAS
 #  define UPPER_HEXAS "0123456789ABCDEF"
-# endif
+# endif //UPPER_HEXAS
 
 # ifndef LOWER_HEXAS
 #  define LOWER_HEXAS "0123456789abcdef"
-# endif
+# endif //LOWER_HEXAS
 
 # ifndef DECIMALS
 #  define DECIMALS "0123456789"
-# endif
+# endif //DECIMALS
 
 # ifndef OCTALS
 #  define OCTALS "01234567"
-# endif
+# endif //OCTALS
 
 # ifndef BINARIES
 #  define BINARIES "01"
-# endif
+# endif //BINARIES
 
 typedef struct s_flags
 {
@@ -189,4 +189,36 @@ size_t				ft_arr_len(char **array);
 char				***ft_arr_split(char **array, char delimiter);
 void				ft_for_each(void **array, void (*f)(void *));
 void				ft_handle_error(const char *message);
+int					ft_ternary(int condition, int a, int b);
+
+//Minitalk
+# ifndef ANSI_COLOR_RED
+#  define ANSI_COLOR_RED "\x1b[31m"
+# endif //ANSI_COLOR_RED
+
+# ifndef ANSI_COLOR_BLUE
+#  define ANSI_COLOR_BLUE "\x1b[34m"
+# endif //ANSI_COLOR_BLUE
+
+# ifndef ANSI_COLOR_GREEN
+#  define ANSI_COLOR_GREEN "\x1b[32m"
+# endif //ANSI_COLOR_GREEN
+
+# ifndef ANSI_COLOR_YELLOW
+#  define ANSI_COLOR_YELLOW "\x1b[33m"
+# endif //ANSI_COLOR_YELLOW
+
+# ifndef ANSI_COLOR_MAGENTA
+#  define ANSI_COLOR_MAGENTA "\x1b[35m"
+# endif //ANSI_COLOR_MAGENTA
+
+# ifndef ANSI_COLOR_CYAN
+#  define ANSI_COLOR_CYAN "\x1b[36m"
+# endif //ANSI_COLOR_CYAN
+
+# ifndef ANSI_COLOR_RESET
+#  define ANSI_COLOR_RESET "\x1b[0m"
+# endif //ANSI_COLOR_RESET
+
+void				ft_putstr_color_fd(char *color, char *s, int fd);
 #endif
