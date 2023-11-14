@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-long	t_ternary(long condition, long a, long b)
+long	ft_ternary(long condition, long a, long b)
 {
 	if (condition)
 		return (a);
