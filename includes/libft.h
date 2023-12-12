@@ -221,4 +221,8 @@ int					ft_ternary(int condition, int a, int b);
 # endif //ANSI_COLOR_RESET
 
 void				ft_putstr_color_fd(char *color, char *s, int fd);
+
+//Push Swap
+long				ft_atol(const char *nptr);
+
 #endif

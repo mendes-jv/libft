@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 10:14:11 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/05/18 10:14:42 by jovicto2         ###   ########.fr       */
+/*   Created: 2023/12/12 12:25:37 by jovicto2          #+#    #+#             */
+/*   Updated: 2023/12/12 12:25:39 by jovicto2         ###   ########.org.br   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atol(const char *str)
 {
-	int	number;
-	int	sign;
+	long	result;
+	int		sign;
 
-	number = 0;
+	result = 0;
 	sign = 1;
-	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
-		if (*nptr++ == '-')
+	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
+		str++;
+	if (*str == '-' || *str == '+')
+		if (*str++ == '-')
 			sign = -1;
-	while (ft_isdigit(*nptr))
-		number = (number * 10) + (*nptr++ - '0');
-	return (number * sign);
+	while (*str && ft_isdigit(*str))
+		result = result * 10 + (*str++ - '0');
+	return (result * sign);
 }

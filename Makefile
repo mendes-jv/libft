@@ -32,7 +32,7 @@ SRC			= $(addprefix $(PATH_SRC), ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 				ft_itoa_hex.c ft_check_string.c ft_printf.c ft_manage_params.c \
 				ft_write_params.c ft_apply_flags.c ft_for_each.c \
 				ft_arr_for_each.c ft_arr_split.c ft_arr_len.c ft_ternary.c \
-				ft_handle_error.c ft_putstr_color_fd.c)
+				ft_handle_error.c ft_putstr_color_fd.c ft_atol.c)
 
 HEADER = includes/
 
@@ -42,8 +42,9 @@ FLAGS = -Wall -Wextra -Werror -Wunreachable-code -Ofast -g3 -O3
 
 OBJS = ${SRC:$(PATH_SRC)%.c=$(PATH_OBJ)%.o}
 
+# Colors
+RED = \033[0;31m
 GREEN = \033[0;32m
-
 RESET = \033[0m
 
 all: $(NAME)
@@ -53,16 +54,28 @@ $(PATH_OBJ)%.o: $(PATH_SRC)%.c
 	@$(CC) $(FLAGS) -c $< -o $@ -I $(HEADER)
 
 $(NAME): $(OBJS) $(HEADER)
-	@$(AR) $(NAME) $(OBJS)
-	@printf "$(GREEN)Compiled $(NAME) successfully!$(RESET)\n"
+	@if [ ! -f $(NAME) ]; then \
+		$(AR) $(NAME) $(OBJS); \
+		printf "$(GREEN)Compiled $(NAME) successfully!$(RESET)\n"; \
+	else \
+		printf "$(RED)$(NAME) is already compiled!$(RESET)\n"; \
+	fi
 
 clean:
-	@rm -rf $(PATH_OBJ)
-	@printf "$(GREEN)Cleaned objects from $(NAME) successfully!$(RESET)\n"
+	@if [ -d $(PATH_OBJ) ]; then \
+		$(RM) -rf $(PATH_OBJ); \
+		printf "$(GREEN)Cleaned objects from $(NAME) successfully!$(RESET)\n"; \
+	else \
+		printf "$(RED)Objects from $(NAME) are already cleaned!$(RESET)\n"; \
+	fi
 
-fclean: clean
-	@rm -f $(NAME)
-	@printf "$(GREEN)Cleaned $(NAME) successfully!$(RESET)\n"
+fclean:
+	@if [ -f $(NAME) ]; then \
+		$(RM) $(NAME); \
+		printf "$(GREEN)Removed $(NAME) successfully!$(RESET)\n"; \
+	else \
+		printf "$(RED)$(NAME) is already cleaned!$(RESET)\n"; \
+	fi
 
 re: fclean all
 
