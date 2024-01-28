@@ -224,5 +224,14 @@ void				ft_putstr_color_fd(char *color, char *s, int fd);
 
 //Push Swap
 long				ft_atol(const char *nptr);
+long long			ft_operate(long long nbr1, long long nbr2, char operate);
+
+# ifndef MIN
+#  define MIN 0b0
+# endif //MIN
+
+# ifndef MAX
+#  define MAX 0b1
+# endif //MAX
 
 #endif
