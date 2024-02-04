@@ -12,7 +12,7 @@
 
 #include "../includes/libft.h"
 
-void	ft_array_for_each(void **array, void (*array_f)(void *),
+void	ft_arr_for_each(void **array, void (*array_f)(void *),
 	void (*index_f)(void *))
 {
 	while (*array)

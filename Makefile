@@ -32,13 +32,14 @@ SRC			= $(addprefix $(PATH_SRC), ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 				ft_itoa_hex.c ft_check_string.c ft_printf.c ft_manage_params.c \
 				ft_write_params.c ft_apply_flags.c ft_for_each.c \
 				ft_arr_for_each.c ft_arr_split.c ft_arr_len.c ft_ternary.c \
-				ft_handle_error.c ft_putstr_color_fd.c ft_atol.c ft_operate.c)
+				ft_handle_error.c ft_putstr_color_fd.c ft_atol.c ft_operate.c \
+				ft_sort_int_arr.c ft_swap.c)
 
 HEADER = includes/
 
 AR = ar -rcs
 
-FLAGS = -Wall -Wextra -Wunreachable-code -Ofast -g3 -O3
+FLAGS = -Wall -Wextra -Wunreachable-code -g3
 
 OBJS = $(patsubst $(PATH_SRC)%.c, $(PATH_OBJ)%.o, $(SRC))
 

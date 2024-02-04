@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_operate.c                                       :+:      :+:    :+:   */
+/*   ft_sort_int_arr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,15 +12,21 @@
 
 #include "../includes/libft.h"
 
-int	ft_operate(int nbr1, int nbr2, char operator)
+void	ft_sort_int_arr(int *arr, size_t size)
 {
-	if (operator == MIN)
+	size_t	first_index;
+	size_t	second_index;
+
+	first_index = 0;
+	while (first_index < size)
 	{
-		if (nbr1 <= nbr2)
-			return (nbr1);
-		return (nbr2);
+		second_index = first_index + 1;
+		while (second_index < size)
+		{
+			if (arr[first_index] > arr[second_index])
+				ft_swap((arr + first_index), (arr + second_index));
+			second_index++;
+		}
+		first_index++;
 	}
-	if (nbr1 >= nbr2)
-		return (nbr1);
-	return (nbr2);
 }
