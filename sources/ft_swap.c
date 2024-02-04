@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_operate.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,15 +12,9 @@
 
 #include "../includes/libft.h"
 
-int	ft_operate(int nbr1, int nbr2, char operator)
+void	ft_swap(int *nbr1, int *nbr2)
 {
-	if (operator == MIN)
-	{
-		if (nbr1 <= nbr2)
-			return (nbr1);
-		return (nbr2);
-	}
-	if (nbr1 >= nbr2)
-		return (nbr1);
-	return (nbr2);
+	*nbr1 ^= *nbr2;
+	*nbr2 ^= *nbr1;
+	*nbr1 ^= *nbr2;
 }

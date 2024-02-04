@@ -224,7 +224,9 @@ void				ft_putstr_color_fd(char *color, char *s, int fd);
 
 //Push Swap
 long				ft_atol(const char *nptr);
-long long			ft_operate(long long nbr1, long long nbr2, char operate);
+int					ft_operate(int nbr1, int nbr2, char operate);
+void				ft_sort_int_arr(int *arr, size_t size);
+void				ft_swap(int *nbr1, int *nbr2);
 
 # ifndef MIN
 #  define MIN 0b0
