@@ -39,7 +39,7 @@ HEADER = includes/
 
 AR = ar -rcs
 
-FLAGS = -Wall -Wextra -Wunreachable-code -g3
+FLAGS = -Wall -Wextra -Werror -Wunreachable-code -Ofast -g3 -O3
 
 OBJS = $(patsubst $(PATH_SRC)%.c, $(PATH_OBJ)%.o, $(SRC))
 
