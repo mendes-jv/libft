@@ -246,7 +246,7 @@ typedef struct	s_dlist
 
 void				ft_dlstadd_b(t_dlist **lst, t_dlist *new);
 void				ft_dlstadd_f(t_dlist **lst, t_dlist *new);
-void				ft_dlstclear(t_dlist **lst, void (*del)(void *), bool free_content);
+void				ft_dlstclear(t_dlist **lst, void (*del)(void *), void (*d_c)(void *));
 void				ft_dlstdelone(t_dlist *lst, void (*del)(void *));
 t_dlist				*ft_dlstlast(t_dlist *lst);
 t_dlist				*ft_dlstnew(void *content);
