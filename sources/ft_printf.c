@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static ssize_t	*ft_set_modifier(char c, ssize_t *width, ssize_t *precision);
 

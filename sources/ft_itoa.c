@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static size_t	ft_ilen(long number);
 static void		ft_putnbr_str(long n, size_t i, size_t len, char *str);

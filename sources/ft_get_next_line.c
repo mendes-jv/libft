@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static char	*ft_buffertrim(char *buffer);
 static char	*ft_getline(char *buffer);

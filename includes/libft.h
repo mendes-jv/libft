@@ -236,4 +236,19 @@ void				ft_swap(int *nbr1, int *nbr2);
 #  define MAX 0b1
 # endif //MAX
 
+//Minishell
+typedef struct	s_dlist
+{
+	void			*content;
+	struct s_dlist	*next;
+	struct s_dlist	*prev;
+}					t_dlist;
+
+void				ft_dlstadd_b(t_dlist **lst, t_dlist *new);
+void				ft_dlstadd_f(t_dlist **lst, t_dlist *new);
+void				ft_dlstclear(t_dlist **lst, void (*del)(void *), bool free_content);
+void				ft_dlstdelone(t_dlist *lst, void (*del)(void *));
+t_dlist				*ft_dlstlast(t_dlist *lst);
+t_dlist				*ft_dlstnew(void *content);
+char 				*ft_strdjoin(char *first, char *second, char *delimiter);
 #endif

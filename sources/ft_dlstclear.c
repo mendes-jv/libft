@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_dlstclear.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 18:51:19 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/05/13 18:53:25 by jovicto2         ###   ########.fr       */
+/*   Created: 2023/05/27 15:15:52 by jovicto2          #+#    #+#             */
+/*   Updated: 2023/05/27 15:21:52 by jovicto2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_dlstclear(t_dlist **lst, void (*del)(void *), bool free_content)
 {
-	if (!dest && !src)
-		return (NULL);
-	if ((unsigned char *)dest < (unsigned char *)src)
-		ft_memcpy(dest, src, n);
-	else
-		while (n--)
-			*(unsigned char *)(dest + n) = *(unsigned char *)(src + n);
-	return (dest);
+	t_dlist	*tmp;
+
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		if (free_content)
+			ft_dlstdelone(*lst, del);
+		else
+			del(*lst);
+		*lst = tmp;
+	}
 }

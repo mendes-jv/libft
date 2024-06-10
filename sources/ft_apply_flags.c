@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_apply_precision(t_parameters *params, ssize_t *conv_len,
 long *index, size_t *pb)

@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_dlstadd_f.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovicto2 <jovicto2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 18:51:19 by jovicto2          #+#    #+#             */
-/*   Updated: 2023/05/13 18:53:25 by jovicto2         ###   ########.fr       */
+/*   Created: 2023/05/28 01:34:16 by jovicto2          #+#    #+#             */
+/*   Updated: 2023/05/28 01:42:57 by jovicto2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_dlstadd_f(t_dlist **lst, t_dlist *new)
 {
-	if (!dest && !src)
-		return (NULL);
-	if ((unsigned char *)dest < (unsigned char *)src)
-		ft_memcpy(dest, src, n);
-	else
-		while (n--)
-			*(unsigned char *)(dest + n) = *(unsigned char *)(src + n);
-	return (dest);
+	if (!new)
+		return ;
+	if (!lst)
+	{
+		*lst = new;
+		return ;
+	}
+	new->next = *lst;
+	*lst = new;
 }

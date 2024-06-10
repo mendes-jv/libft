@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static size_t	ft_ilen(long long nbr, size_t base_len);
 static char		ft_apply_checker(size_t *checker, char c);

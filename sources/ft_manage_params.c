@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static void	ft_init_flags(t_flags *flags);
 static void	ft_init_mods(ssize_t *width, ssize_t *precision);
