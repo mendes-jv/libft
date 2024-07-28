@@ -252,4 +252,6 @@ void				ft_dlstiter(t_dlist *lst, void (*f)(void *));
 t_dlist				*ft_dlstlast(t_dlist *lst);
 t_dlist				*ft_dlstnew(void *content);
 char 				*ft_strdjoin(char *first, char *second, char *delimiter);
+char 				*ft_strfjoin(char *first, char *second);
+
 #endif
