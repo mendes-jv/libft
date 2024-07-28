@@ -16,9 +16,11 @@ char	*ft_strdjoin(char *first, char *second, char *delimiter)
 {
 	char	*string;
 	size_t	length;
+	size_t	allocation_length;
 
 	length = ft_strlen(first);
-	string = (char *)malloc(length + ft_strlen(second) + ft_strlen(delimiter) + 1);
+	allocation_length = length + ft_strlen(second) + ft_strlen(delimiter) + 1;
+	string = (char *)malloc(allocation_length * sizeof(char));
 	if (string && first && second && delimiter)
 	{
 		ft_strlcpy(string, first, length + 1);
