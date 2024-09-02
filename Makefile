@@ -35,7 +35,7 @@ SRC			= $(addprefix $(PATH_SRC), ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 				ft_handle_error.c ft_putstr_color_fd.c ft_atol.c ft_operate.c \
 				ft_sort_int_arr.c ft_swap.c ft_dlstnew.c ft_dlstadd_f.c \
 				ft_dlstadd_b.c ft_dlstclear.c ft_dlstdelone.c ft_dlstlast.c \
-				ft_strdjoin.c ft_strfjoin.c)
+				ft_dlstiter.c ft_strdjoin.c ft_strfjoin.c)
 
 HEADER = includes/
 
