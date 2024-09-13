@@ -237,7 +237,7 @@ void				ft_swap(int *nbr1, int *nbr2);
 # endif //MAX
 
 //Minishell
-typedef struct	s_dlist
+typedef struct s_dlist
 {
 	void			*content;
 	struct s_dlist	*next;
@@ -246,12 +246,13 @@ typedef struct	s_dlist
 
 void				ft_dlstadd_b(t_dlist **lst, t_dlist *new);
 void				ft_dlstadd_f(t_dlist **lst, t_dlist *new);
-void				ft_dlstclear(t_dlist **lst, void (*del)(void *), void (*d_c)(void *));
+void				ft_dlstclear(t_dlist **lst, void (*del)(void *),
+						void (*d_c)(void *));
 void				ft_dlstdelone(t_dlist *lst, void (*del)(void *));
 void				ft_dlstiter(t_dlist *lst, void (*f)(void *));
 t_dlist				*ft_dlstlast(t_dlist *lst);
 t_dlist				*ft_dlstnew(void *content);
-char 				*ft_strdjoin(char *first, char *second, char *delimiter);
-char 				*ft_strfjoin(char *first, char *second);
+char				*ft_strdjoin(char *first, char *second, char *delimiter);
+char				*ft_strfjoin(char *first, char *second);
 
 #endif

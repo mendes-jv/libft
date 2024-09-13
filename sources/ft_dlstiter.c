@@ -14,7 +14,7 @@
 
 void	ft_dlstiter(t_dlist *lst, void (*f)(void *))
 {
-	t_dlist *temp_node;
+	t_dlist	*temp_node;
 
 	temp_node = lst;
 	if (!lst || !f)
